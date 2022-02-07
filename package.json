@@ -1,9 +1,11 @@
 {
   "name": "@iiif/presentation-2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "source": "index.js",
   "typings": "index.d.ts",
-  "contributors": ["Stephen Fraser <stephen.fraser@digirati.com>"],
+  "contributors": [
+    "Stephen Fraser <stephen.fraser@digirati.com>"
+  ],
   "license": "MIT",
   "files": [
     "iiif",
