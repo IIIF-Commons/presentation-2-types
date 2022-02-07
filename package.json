@@ -14,10 +14,11 @@
     "traversal.d.ts",
     "utility.d.ts"
   ],
-  "dependencies": {
-    "@iiif/presentation-3": "1.0.0"
+  "peerDependencies": {
+    "@iiif/presentation-3": "*"
   },
   "devDependencies": {
+    "@iiif/presentation-3": "*",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
