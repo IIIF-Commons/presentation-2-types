@@ -1,6 +1,6 @@
 {
   "name": "@iiif/presentation-2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "source": "index.js",
   "typings": "index.d.ts",
   "contributors": [
