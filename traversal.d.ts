@@ -29,7 +29,7 @@ export type TraversableEntityTypes =
   | 'sc:Collection'
   | 'sc:Manifest'
   | 'sc:Canvas'
-  | 'oa:AnnotationList'
+  | 'sc:AnnotationList'
   | 'oa:Annotation'
   | 'sc:Range'
   | 'sc:Layer'
