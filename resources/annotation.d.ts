@@ -1,23 +1,27 @@
-import { SpecificResource } from '@iiif/presentation-3';
-
 import { OmitProperties, OneOrMany } from '../utility';
 import { TechnicalProperties } from '../iiif/technical';
 import { DescriptiveProperties } from '../iiif/descriptive';
 import { LinkingProperties } from '../iiif/linking';
-import { ContentResource } from './content-resource';
+import { ContentResource, ContentResourceSelector } from './content-resource';
 import { RightsProperties } from '../iiif/rights';
 
 type AnnotationOmittedTechnical = '@id' | 'format' | 'height' | 'width' | 'viewingDirection' | 'navDate';
 type AnnotationOmittedLinking = 'startCanvas';
 
 type AnnotationStructural = {
-  motivation: string;
-  resource: ContentResource;
+  motivation: OneOrMany<string>;
+  resource: OneOrMany<ContentResource>;
   stylesheet?: {
     '@type': ['oa:CssStyle', 'cnt:ContentAsText'];
     chars: string;
   };
   on: OneOrMany<string | { '@id': string } | SpecificResource>; // @todo maybe need to expand this.
+};
+
+export declare type SpecificResource = {
+  '@type': 'oa:SpecificResource',
+  full: string | ContentResource,
+  selector: ContentResourceSelector,
 };
 
 /**
