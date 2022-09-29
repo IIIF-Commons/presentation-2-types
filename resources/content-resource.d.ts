@@ -10,7 +10,7 @@ type ContentResourceSelector =
       region: string;
     }
   | {
-      '@type': ['oa:SvgSelector', 'cnt:ContentAsText'];
+      '@type': ['oa:SvgSelector', 'cnt:ContentAsText'] | [ 'cnt:ContentAsText', 'oa:SvgSelector' ] | 'oa:SvgSelector';
       chars: string;
     }
   | {
@@ -23,7 +23,16 @@ type ContentResourceSelector =
       '@type': 'iiif:ImageApiSelector';
       region: string;
       rotation: string;
-    };
+    }
+  | {
+      '@type': 'oa:Choice';
+      default: ContentResourceSelector;
+      item: ContentResourceSelector | ContentResourceSelector[];
+    }
+  | {
+      '@type': 'oa:FragmentSelector';
+      value: string;
+    }
 
 type ImageResourceSegment = {
   '@id': string;
